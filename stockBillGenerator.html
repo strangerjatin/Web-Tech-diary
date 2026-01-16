@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Billing Module</title>
+  
+</head>
+<body>
+  <h2>Online Billing Form</h2>
+
+  <form id="billingForm">
+    <label>Customer Name:</label><br>
+    <input type="text" id="cName" required><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="text" id="mobile" required><br><br>
+
+    <label>Stock Category:</label><br>
+    <input type="text" id="stockCat" required><br><br>
+
+    <label>Stock Item:</label><br>
+    <input type="text" id="stockItem" required><br><br>
+
+    <label>Item Price:</label><br>
+    <input type="number" id="price" required><br><br>
+
+    <label>Stock Quantity:</label><br>
+    <input type="number" id="quantity" required><br><br>
+
+    <label>Discount (%):</label><br>
+    <input type="number" id="discount" value="0"><br><br>
+
+    <button type="submit">Generate Bill</button>
+  </form>
+
+  <br>
+  <div id="billOutput"></div>
+
+  <script src="billing.js"></script>
+</body>
+</html>
