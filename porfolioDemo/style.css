@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(0, 0, 33);
+    color: white;
+    font-family: "gf_Poppins variant5", Tofu;
+}
+
+/* NAV & TEXT */
+.left {
+    font-size: 1.6rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(0, 0, 22);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+/* SECTIONS */
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0;
+}
+
+.firstSection>div {
+    width: 30%;
+}
+
+/* ANIMATIONS */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.leftSection {
+    font-size: 3rem;
+    animation: slideInLeft 1.5s ease-out forwards;
+}
+
+.rightSection {
+    font-size: 3rem;
+    border: 2px solid #000;
+    border-radius: 50px;
+    background-image: url("down.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+    animation: slideInRight 1.5s ease-out forwards;
+}
+
+/* Anchor Tag Animations */
+a {
+    color: beige;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: beige;
+    transition: width 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+    /* Optional: change color on hover */
+
+}
+
+nav:hover {
+    background-color: #1d777e;
+    transition: 1s;
+}
+
+.leftSection:hover {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+footer {
+    margin-top: 20%;
+}
